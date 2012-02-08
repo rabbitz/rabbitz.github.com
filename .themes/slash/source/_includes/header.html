@@ -1,0 +1,12 @@
+<h1 class="left"><a href="{{ root_url }}/">{{ site.title }}</a></h1>
+<nav class="menu left">{% include navigation.html %}</nav>
+<form class="search right" action="{{ site.simple_search }}" method="get">
+	<input class="left" type="text" name="q" results="0">
+	<input type="hidden" name="q" value="site:{{ site.url | shorthand_url }}">
+</form>
+<div class="social right">
+	<a href="http://www.facebook.com/" title="Facebook">Facebook</a>
+	<a href="https://plus.google.com/" title="Google+">Google+</a>
+	<a href="{{ site.subscribe_rss }}" title="RSS">RSS</a>
+</div>
+{% include custom/header.html %}

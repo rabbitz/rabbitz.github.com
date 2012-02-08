@@ -1,0 +1,15 @@
+{% if index %}
+    <h1 class="title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h1>
+    <div class="entry">
+        {{ content | excerpt }}
+        {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
+    </div>
+{% else %}
+    <h1 class="title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+    <div class="entry">{{ content }}</div>
+    <!--<div class="meta">-->
+        <!--{% if site.disqus_short_name and page.comments == true %}-->
+        <!--<div class="comments"><a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">留言</a></div>-->
+        <!--{% endif %}-->
+    <!--</div>-->
+{% endif %}

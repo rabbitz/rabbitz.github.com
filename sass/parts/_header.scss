@@ -1,0 +1,145 @@
+header{
+	height: 30px;
+	padding: 30px 0;
+	border-bottom: 1px solid $border;
+	line-height: 30px;
+	a{
+		color: $font-main;
+		@include transition(0.3s);
+		&:hover{
+			color: $main;
+		}
+	}
+	h1{
+		font-weight: 300;
+		font-size: 30px;
+	}
+	nav{
+		margin-left: 30px;
+		>ul{
+			list-style: none;
+			padding-right: 30px;
+			>li{
+				float: left;
+				margin-left: 50px;
+				position: relative;
+				&:hover{
+					>a{
+						color: $main;
+					}
+				}
+				>a{
+					padding: 35px 30px 35px 0;
+					margin-top: -35px;
+					background: image-url('detail.png') right center no-repeat;
+					&:only-child{
+						padding-right: 0;
+						background: none;
+					}
+				}
+			}
+			ul{
+				position: absolute;
+				top: 60px;
+				left: -15px;
+				z-index: 10;
+				white-space: nowrap;
+				background: #ddd;
+				border: 1px solid #ccc;
+				border-radius: 0 0 5px 5px;
+				box-shadow: 0 4px 8px #DDDDDD;
+				list-style: none;
+				display: none;
+				li{
+					@include border-shadow(#eee, #ccc);
+					&:hover{
+						background: #d5d5d5;
+					}
+					&:first-of-type{
+						border-top: none;
+					}
+					&:last-of-type{
+						border-bottom: none;
+					}
+					a{
+						display: block;
+						padding: 5px 15px;
+						width: 100%;
+						&:hover{
+							color: #666;
+						}
+					}
+				}
+			}
+			li{
+				&:hover{
+					>ul{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.search{
+		input[type="text"]{
+			background: image-url('search.png') 10px center no-repeat #f2f2f2;
+			color: #999;
+			border: 1px solid $border;
+			@include border-radius(15px);
+			font: 13px $default;
+			padding: 6px 15px 6px 35px;
+			width: 100px;
+			@include transition(0.3s);
+			&:focus, &:active{
+				background: image-url('search.png') 10px center no-repeat #fff;
+				width: 150px;
+				border-top: 1px solid #ccc;
+				color: $font-main;
+				outline: none;
+			}
+		}
+	}
+	.social{
+		margin-right: 15px;
+		a{
+			@include border-radius(50%);
+			display: inline-block;
+			text-indent: -9999px;
+			margin-right: 15px;
+			opacity: 0.5;
+			@include square(28px);
+			@include transition(0.3s);
+			&:hover{
+				opacity: 1;
+			}
+			&:first-of-type{
+				background: image-url('facebook.png') center no-repeat #3B5998;
+				border: 1px solid #3B5998;
+				&:hover{
+					border: 1px solid darken(#3B5998, 10%);
+				}
+			}
+			&:nth-of-type(2){
+				background: image-url('google.png') center no-repeat #C83D20;
+				border: 1px solid #C83D20;
+				&:hover{
+					border: 1px solid darken(#C83D20, 10%);
+				}
+			}
+			&:nth-of-type(3){
+				background: image-url('twitter.png') center no-repeat #55CFF8;
+				border: 1px solid #55CFF8;
+				&:hover{
+					border: 1px solid darken(#55CFF8, 10%);
+				}
+			}
+			&:last-of-type{
+				background: image-url('rss.png') center no-repeat #EF7522;
+				border: 1px solid #EF7522;
+				&:hover{
+					border: 1px solid darken(#EF7522, 10%);
+				}
+			}
+		}
+	}
+}
