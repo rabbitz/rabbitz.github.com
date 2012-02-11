@@ -3,7 +3,7 @@
     <div class="entry">
         {{ content | excerpt }}
         {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-        {% if excerpted == 'true' %}<a href="{{ root_url }}{{ post.url }}" class="more-link">閱讀全文</a>{% endif %}
+        {% if excerpted == 'true' %}<a href="{{ root_url }}{{ post.url }}" class="more-link">阅读全文</a>{% endif %}
     </div>
     <div class="meta">
         <div class="date">{% include post/date.html %}{{ time }}</div>
