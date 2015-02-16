@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "芦苇地带 ◎杨牧"
+title: "芦苇地带"
 modified:
 categories:
 description:
